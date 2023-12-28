@@ -12,8 +12,7 @@ import HiFresh.recepten.business.ReceptService;
 import java.util.List;
 import java.util.Map;
 
-@CucumberContextConfiguration
-@SpringBootTest
+
 public class BackgroundSteps {
 
     private final ReceptService receptService;

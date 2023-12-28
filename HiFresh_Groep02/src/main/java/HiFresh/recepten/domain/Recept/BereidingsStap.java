@@ -1,5 +1,6 @@
-package HiFresh.recepten.domain;
+package HiFresh.recepten.domain.Recept;
 
+import HiFresh.recepten.domain.Ingredient;
 import HiFresh.recepten.domain.Recept.Bereiding;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

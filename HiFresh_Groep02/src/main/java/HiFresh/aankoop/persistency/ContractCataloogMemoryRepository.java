@@ -103,7 +103,7 @@ public class ContractCataloogMemoryRepository implements ContractCataloogReposit
 
     @Override
     public void addClausuleToContract(Contract contract, Clausule clausule) {
-        contract.addClausule(clausule); // Assuming Contract has a method to add a Clausule
+        contract.addClausule(clausule);
         contractenCataloog.put(contract.getId(), contract);
     }
 }

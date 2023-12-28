@@ -11,4 +11,10 @@ public class Leverancier extends Rol {
     private int reputatie;
 
     private String naam;
+    private String adres;
+
+    public Leverancier(String naam, String adres) {
+        this.naam = naam;
+        this.adres = adres;
+    }
 }

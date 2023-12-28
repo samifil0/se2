@@ -12,13 +12,20 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Ingredient {
     private double hoeveelheid;
-    private Eenheid eenheid;
+    private String eenheid;
 
     private Product product;
 
     private Recept recept;
 
     private long id;
+
+    public Ingredient(double hoeveelheid, String eenheid, Product product, Recept recept) {
+        this.hoeveelheid = hoeveelheid;
+        this.eenheid = eenheid;
+        this.product = product;
+        this.recept = recept;
+    }
 
 
 }

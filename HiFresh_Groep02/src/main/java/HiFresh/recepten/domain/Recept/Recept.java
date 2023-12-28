@@ -8,7 +8,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
 
 @Getter
@@ -48,5 +50,20 @@ public class Recept implements Bereiding{
     @Override
     public List<Bereiding> getVolgendeStappen() {
         return new ArrayList<>(bereidingen);
+    }
+
+    public void addBereidingsstap(String bereidingsstap) {
+        bereidingen.add(new BereidingsStap(bereidingsstap, new ArrayList<>()));
+    }
+
+    public Collection<BereidingsStap> getBereidingsstappen() {
+        return bereidingen.stream()
+                .filter(bereiding -> bereiding instanceof BereidingsStap)
+                .map(bereiding -> (BereidingsStap) bereiding)
+                .collect(Collectors.toList());
+    }
+
+    public PatternSyntaxException getLastBereidingsstap() {
+        return (PatternSyntaxException) bereidingen.get(bereidingen.size() - 1);
     }
 }
